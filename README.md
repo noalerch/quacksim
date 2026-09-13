@@ -35,6 +35,7 @@ output. Global, cell, agent, and conflict-resolution methods have useful
 defaults. The engine reuses cell storage between ticks, but model output and
 command vectors can allocate according to model needs.
 
+## Example: Wolf-Sheep-Grass
 The wolf-sheep-grass example includes random movement, movement energy
 costs, sheep grazing, wolf predation, reproduction, death, grass regrowth, and
 species counts. Model randomness uses a configured seed and per-agent streams,
@@ -55,3 +56,25 @@ Run all tests:
 ```sh
 cargo test --all-targets --all-features
 ```
+
+Record wolf-sheep-grass metrics as CSV:
+
+```sh
+cargo run --example wolf_sheep_grass -- \
+  --metrics runs/run-001.csv --sample-every 50
+```
+
+Plot one or more metric files with Python:
+
+```sh
+python3 -m venv .venv
+. .venv/bin/activate
+python -m pip install -r analysis/requirements.txt
+python analysis/plot.py runs/run-001.csv --output graphs/run-001.png
+```
+
+Python 3.10 or newer is required. See `analysis/README.md` for details.
+
+The library provides the generic `TickRecorder` trait and `SampledRecorder`.
+Recorders receive output only after a tick commits successfully. Model examples
+define their own metric formats.
