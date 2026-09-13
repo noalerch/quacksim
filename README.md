@@ -1,10 +1,10 @@
 # Quacksim
 
-Quacksim is a Rust library for parallel, high-performance 2D simulations.
+Quacksim is a Rust project for parallel, high-performance 2D simulations of agent-based population models.
 
 The library provides:
 
-- A flat, row-major grid.
+- A flat row-major grid.
 - Parallel cell and agent updates with Rayon.
 - Immutable world views during parallel stages.
 - Deterministic command collection order for all worker counts.
