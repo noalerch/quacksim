@@ -1,0 +1,9 @@
+[package]
+name = "quacksim"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.85"
+
+[dependencies]
+rand = { version = "0.10.2", features = ["std_rng"] }
+rayon = "1.10"
