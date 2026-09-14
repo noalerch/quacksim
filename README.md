@@ -37,11 +37,10 @@ command vectors can allocate according to model needs.
 
 ## Example: Wolf-Sheep-Grass
 An example model is a wolf-sheep-grass model. Grass grows, sheep eat it and
-reproduce. Wolves eat sheep and reproduce, etc. The plot below shows how
+reproduce. Wolves eat sheep and reproduce, etc. The plot below [TODO: add] shows how
 population development approximates a Lotka-Volterra curve over 10,000 
 generations.
 
-<img width="1000" height="800" alt="run-001" src="https://github.com/user-attachments/assets/4af7df87-9d03-4158-9d3f-cb8ffa37e651" />
 
 The wolf-sheep-grass example includes random movement, movement energy
 costs, sheep grazing, wolf predation, reproduction, death, grass regrowth, and
